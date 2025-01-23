@@ -1,7 +1,9 @@
 import mongoose from 'mongoose';
+import * as dotenv from 'dotenv' 
+dotenv.config({});
 
 const connection = () => {
-    mongoose.connect('mongodb://127.0.0.1:27017/Saraha', {
+    mongoose.connect(process.env.DATABASE_URL, {
         // useNewUrlParser: true,
         // useUnifiedTopology: true,
         // useCreateIndex: true,
