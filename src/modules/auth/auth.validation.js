@@ -5,7 +5,7 @@ import Joi from 'joi'
 export const registerValidationSchema = Joi.object({
     userName: Joi.string()
         .alphanum()
-        .min(5)
+        .min(2)
         .max(30)
         .required()
         .messages({
